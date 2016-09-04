@@ -1,0 +1,107 @@
+@CHARSET "ISO-8859-1";
+
+table.liste { 
+	list-style-type:none;
+	padding-left:20px;
+ 	font-size: 16px;
+ 	text-align:left;
+	font-family:"Lucida Sans Unicode","Lucida Grande",sans-serif;
+ }
+ 
+td.radio { 
+ 	background-color:#B0C4DE;
+ 	width:100px;
+ 	text-align:center;
+}
+ 
+td.cote { 
+ 	background-color:#B0C4DE;
+ 	width:50px;
+ 	text-align:center;
+ }
+
+td.titre {
+ 	background-color:#ADD8E6;
+ 	width:300px;
+ 	text-align:left;
+ 	padding:3px;
+ 	padding-left:20px;
+}
+
+td.desc {
+ 	background-color:#E6E6FA;
+ 	width:300px;
+ 	text-align:left;
+    padding-left:20px;
+}
+
+td.nb {
+ 	background-color:#ADD8E6;
+ 	width:50px;
+ 	text-align:center;
+}
+
+/* auteur */
+
+td.reference { 
+ 	background-color:#B0C4DE;
+ 	width:50px;
+ 	text-align:center;
+ }
+
+td.nom {
+ 	background-color:#ADD8E6;
+ 	width:300px;
+ 	text-align:left;
+ 	padding:3px;
+ 	padding-left:20px;
+}
+
+td.prenom {
+ 	background-color:#E6E6FA;
+ 	width:300px;
+ 	text-align:left;
+    padding-left:20px;
+}
+
+td.nationalite {
+ 	background-color:#ADD8E6;
+ 	width:200px;
+ 	text-align:center;
+}
+
+td.dateNaissance {
+ 	background-color:#E6E6FA;
+ 	width:200px;
+ 	text-align:center;
+}
+
+/* themes */
+
+td.thref { 
+ 	background-color:#B0C4DE;
+ 	width:50px;
+ 	text-align:center;
+ }
+
+td.thnom {
+ 	background-color:#ADD8E6;
+ 	width:300px;
+ 	text-align:left;
+ 	padding:3px;
+ 	padding-left:20px;
+}
+
+td.thdesc {
+ 	background-color:#E6E6FA;
+ 	width:300px;
+ 	text-align:left;
+    padding-left:20px;
+}
+
+
+td.thdocs {
+ 	background-color:#ADD8E6;
+ 	width:200px;
+ 	text-align:center;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- controleur principal de l'application -->
+	<include file="biblio.xml" />
+	<include file="pers.xml" />
+	<package name="application" namespace="/vue" extends="struts-default">
+		<action name="accueil">
+			<result>/vue/accueil.jsp</result>
+		</action>
+
+		<!-- ================================== 
+		     gestion des css 
+		================================== 	-->
+		<action name="css">
+			<result>/css/biblio.css</result>
+		</action>
+		<action name="cssListe">
+			<result>/css/biblio/liste.css</result>
+		</action>
+	</package>
+
+</struts>

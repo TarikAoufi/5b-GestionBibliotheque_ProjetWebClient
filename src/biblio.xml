@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="biblio" namespace="/biblio" extends="struts-default">
+		<action name="accueil">
+			<result>/vue/biblio/accueil.jsp</result>
+		</action>
+
+		<!-- CRUD AUTEUR ================================= -->
+		<action name="*Auteur" method="{1}" class="fr.aoufi.webapp.biblio.CrudAuteurAction">
+			<result name="populate">/vue/biblio/gestion/formAuteur.jsp</result>
+			<result name="input">/vue/biblio/gestion/formAuteur.jsp</result>
+			<result name="success">/vue/biblio/gestion/formAuteur.jsp</result>
+			<result name="ajaxRecherche">/vue/biblio/catalogue/resultAuteur.jsp</result>
+			<result name="ajaxRechercheV2">/vue/biblio/catalogue/resultAuteurV2.jsp</result>
+		</action>
+		
+		<!-- CRUD DOCUMENT ================================= -->
+		<action name="*Document" method="{1}" class="fr.aoufi.webapp.biblio.CrudDocumentAction">
+			<result name="populate">/vue/biblio/gestion/formDocument.jsp</result>
+			<result name="input">/vue/biblio/gestion/formDocument.jsp</result>
+			<result name="success">/vue/biblio/gestion/formDocument.jsp</result>
+		</action>
+
+		<!-- CRUD THEME ================================= -->
+		<action name="*Theme" method="{1}" class="fr.aoufi.webapp.biblio.CrudThemeAction">
+			<result name="populate">/vue/biblio/gestion/formTheme.jsp</result>
+			<result name="input">/vue/biblio/gestion/formTheme.jsp</result>
+			<result name="success">/vue/biblio/gestion/formTheme.jsp</result>
+		</action>
+		
+		<!-- AFFICHAGE CATALOGUE ================================= -->
+		<action name="*Catalogue" method="{1}" class="fr.aoufi.webapp.biblio.AfficheCatalogueAction">
+			<result name="success">/vue/biblio/catalogue/listeDocument.jsp</result>
+			<result name="detail">/vue/biblio/catalogue/detailDocument.jsp</result>
+		</action>
+
+		<!-- ================================== gestion des css ================================== -->
+		<action name="cssFormAuteur">
+			<result>/css/biblio/formAuteur.css</result>
+		</action>
+		<action name="cssFormTheme">
+			<result>/css/biblio/formTheme.css</result>
+		</action>
+		<action name="cssFormDocument">
+			<result>/css/biblio/formDocument.css</result>
+		</action>
+		<action name="cssCatalogue">
+			<result>/css/biblio/catalogue.css</result>
+		</action>
+
+		<!-- AUTRE ================================= -->
+		<action name="TODO">
+			<result>/vue/TODO.jsp</result>
+		</action>
+	</package>
+</struts>

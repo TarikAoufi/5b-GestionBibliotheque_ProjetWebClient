@@ -1,0 +1,98 @@
+@CHARSET "ISO-8859-1";
+
+/* source : http://www.lyxia.org/blog/developpement/xhtmlcss/un-menu-entierement-html-et-css-1e-partie-667 */
+body {
+	background: #D3D3D3;
+	}
+
+.italic {
+	font-style: italic;
+}
+
+ul#menu {
+	width:auto;
+	height:50px;
+	list-style-type: none;
+	font-size: 12px;
+	font-weight: bold;
+	text-align:center;
+	background: #f3f4f5;
+	font-family:"Lucida Sans Unicode","Lucida Grande",sans-serif;
+	margin:6px 50px 0 10px;
+	padding: 0;
+	display:inline-block; 			
+}
+
+#menu li { 
+	float: left; 					/* les li à côté les uns des autres - sinon empilement*/
+	width: 12em; 
+}
+
+ul#menu li a {
+	display: block; 				
+	width:12em; 					
+	color: #800080;					/* couleur police des li */
+	text-decoration: none;
+	height: 24px;
+	padding: 12px 10px 0 10px;
+	text-align:center
+}
+
+ul#menu li a.current, ul#menu li a.current:hover {
+	color: #fff;
+}
+
+#menu li ul { 
+	position: absolute; /* 5 */
+	width: 8.8em; 
+	left: -999em;
+	padding: 0;
+	padding-top:4px;
+	list-style: none;
+	}
+
+
+/* menu de 2e niveau*/
+
+#menu li ul a {
+	text-align:left;
+	padding:6px 18px;
+	width:7.7em; 
+	background-color: #D8D8DA;
+	}
+
+#menu li ul a:hover {
+	background-color: #FAFAFA;
+	}
+
+
+/* remonte la position du sous-menu */
+#menu li ul li {
+	margin:-3px 0 0 0;
+	padding:0;
+	}
+
+#menu li ul li ul a {
+	width:11em;  
+	background-color: #CDF0FC;
+	}
+
+#menu li ul li ul a:hover{
+	background-color: #91C6F0;
+	}
+
+#menu li:hover ul ul {
+	left: -999em; /* 6 */
+}
+
+#menu li ul li ul li{
+	padding:0;
+	position:relative; /* 7 */
+	left: 128px;
+	top: -30px;
+	}
+	
+
+#menu li:hover ul, #menu li li:hover ul { 
+	left: auto; /* 8 */
+}

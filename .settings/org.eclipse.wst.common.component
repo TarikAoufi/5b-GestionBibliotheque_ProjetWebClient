@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="biblioClient">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="commons-fileupload-1.3.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/httpd/lib/strutsLib/commons-fileupload-1.3.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="struts2-core-2.3.20.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/httpd/lib/strutsLib/struts2-core-2.3.20.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="freemarker-2.3.19.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/httpd/lib/strutsLib/freemarker-2.3.19.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io-2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/httpd/lib/strutsLib/commons-io-2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ognl-3.0.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/httpd/lib/strutsLib/ognl-3.0.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3-3.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/httpd/lib/strutsLib/commons-lang3-3.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javassist-3.11.0.GA.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/httpd/lib/strutsLib/javassist-3.11.0.GA.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="struts2-dojo-plugin-2.3.20.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/httpd/lib/strutsLib/struts2-dojo-plugin-2.3.20.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xwork-core-2.3.20.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/httpd/lib/strutsLib/xwork-core-2.3.20.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/biblioClient/build/classes"/>
+        <property name="context-root" value="biblioClient"/>
+    </wb-module>
+</project-modules>

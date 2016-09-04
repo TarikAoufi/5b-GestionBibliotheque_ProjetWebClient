@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+
+#d1,#d2,#d4 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 14px;
+	/* top right bottom left */
+	margin: 20px 10px 30px 30px;
+}
+
+#d1,#d2 {
+	float: left;
+	padding-left: 20px;
+	height: 320px;
+}
+
+#d1 {
+	background-color: #ADD8E6;
+	width: 200px;
+}
+
+#d2 {
+	background-color: #E6E6FA;
+	width: 500px;
+}
+
+#d4 {
+	clear: left;
+}
