@@ -1,7 +1,7 @@
 # 5b-GestionBibliotheque_ProjetWebClient
 Web Project + EJB 3 + Hibernate 3 + Struts 2 + JSP + Ajax + JBoss AS 7.1 + Oracle 11g
 
-Domaine: Gestion d'une bibliothèque
+Domaine: Gestion d'une bibliothèque 
 
     Cette application est composée de 2 projets: EJB Project: biblioServer + Dynamic Web Project: biblioClient
 
