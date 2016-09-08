@@ -8,7 +8,7 @@ import fr.aoufi.appli.biblio.GestionDocument;
 import fr.aoufi.clientServer.UserException;
 import fr.aoufi.entity.Auteur;
 import fr.aoufi.entity.Document;
-import fr.aoufi.entity.ThemeDoc;
+import fr.aoufi.entity.Theme;
 import fr.aoufi.webapp.ApplicationSupport;
 
 public class CrudDocumentAction extends ApplicationSupport {
@@ -23,7 +23,7 @@ public class CrudDocumentAction extends ApplicationSupport {
 	private String selectionAuteur ;
 
 	// gestion de la liste des themes
-	private Collection<ThemeDoc> themes  = new ArrayList<>();
+	private Collection<Theme> themes  = new ArrayList<>();
 	
 	private String[] selectionTheme;
 
@@ -54,7 +54,7 @@ public class CrudDocumentAction extends ApplicationSupport {
 			if (document.getThemes()!= null) {
 				int i = 0;
 				selectionTheme = new String[document.getThemes().size()];
-				for(ThemeDoc theme: document.getThemes()) {
+				for(Theme theme: document.getThemes()) {
 					selectionTheme[i] = theme.getId();
 					i++;
 				}
@@ -69,7 +69,7 @@ public class CrudDocumentAction extends ApplicationSupport {
 	private void initListeAuteurTheme() {
 		GestionCatalogue gestionCatalogue 	= new GestionCatalogue();
 		auteurs = (ArrayList<Auteur>) gestionCatalogue.auteurParId();
-		themes  = (ArrayList<ThemeDoc>) gestionCatalogue.themeParId();	
+		themes  = (ArrayList<Theme>) gestionCatalogue.themeParId();	
 	}
 
 	/**
@@ -164,7 +164,7 @@ public class CrudDocumentAction extends ApplicationSupport {
 	//	public void setAuteurs(Collection<Auteur> auteurs) {
 	//	this.auteurs = auteurs;
 	//}
-	//	public void setThemes(Collection<ThemeDoc> themes) {
+	//	public void setThemes(Collection<Theme> themes) {
 	//	this.themes = themes;
 	//}
 
@@ -188,7 +188,7 @@ public class CrudDocumentAction extends ApplicationSupport {
 		this.selectionAuteur = selectionAuteur;
 	}
 
-	public Collection<ThemeDoc> getThemes() {
+	public Collection<Theme> getThemes() {
 		return themes;
 	}
 

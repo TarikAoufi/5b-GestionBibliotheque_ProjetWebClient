@@ -2,14 +2,14 @@ package fr.aoufi.webapp.biblio;
 
 import fr.aoufi.appli.biblio.GestionDocument;
 import fr.aoufi.clientServer.UserException;
-import fr.aoufi.entity.ThemeDoc;
+import fr.aoufi.entity.Theme;
 import fr.aoufi.webapp.ApplicationSupport;
 
 public class CrudThemeAction extends ApplicationSupport {
 
 	private static final long serialVersionUID = 1L;
 	
-	private ThemeDoc unTheme;
+	private Theme unTheme;
 	
 	private String msgErreur;
 	
@@ -27,7 +27,7 @@ public class CrudThemeAction extends ApplicationSupport {
 		try {
 			gestionDocument.creerTheme(unTheme);
 		} catch (UserException e) {
-			System.out.println("DM***** CrudThemeAction - creation()  ERROR : " + e.getMessage());
+			System.out.println("***** CrudThemeAction - creation()  ERROR : " + e.getMessage());
 			setMsgErreur(e.getMessage());
 			return INPUT;
 		}
@@ -74,11 +74,11 @@ public class CrudThemeAction extends ApplicationSupport {
 		return SUCCESS;
 	}
 
-	public ThemeDoc getUnTheme() {
+	public Theme getUnTheme() {
 		return unTheme;
 	}
 
-	public void setUnTheme(ThemeDoc unTheme) {
+	public void setUnTheme(Theme unTheme) {
 		this.unTheme = unTheme;
 	}
 

@@ -8,7 +8,7 @@ import fr.aoufi.clientServer.IServiceFacade;
 import fr.aoufi.clientServer.UserException;
 import fr.aoufi.entity.Auteur;
 import fr.aoufi.entity.Document;
-import fr.aoufi.entity.ThemeDoc;
+import fr.aoufi.entity.Theme;
 import fr.aoufi.ressources.Param;
 
 /**
@@ -50,15 +50,15 @@ public class GestionCatalogue {
 		return liste;
 	}
 	
-	public List<ThemeDoc> themeParId() {
+	public List<Theme> themeParId() {
 		init();
-		List<ThemeDoc> liste = serviceFacade.getAllThemeById();
+		List<Theme> liste = serviceFacade.getAllThemeById();
 		return liste;
 	}
 	
-	public List<ThemeDoc> themeParNom() {
+	public List<Theme> themeParNom() {
 		init();
-		List<ThemeDoc> liste = serviceFacade.getAllThemeByNom();
+		List<Theme> liste = serviceFacade.getAllThemeByNom();
 		return liste;
 	}
 	

@@ -9,7 +9,7 @@ import fr.aoufi.clientServer.UserException;
 import fr.aoufi.entity.Auteur;
 import fr.aoufi.entity.Document;
 import fr.aoufi.entity.Localisation;
-import fr.aoufi.entity.ThemeDoc;
+import fr.aoufi.entity.Theme;
 import fr.aoufi.ressources.Erreur;
 import fr.aoufi.ressources.Param;
 
@@ -60,10 +60,10 @@ public class GestionDocument {
 				}
 			}
 			// trt Theme
-			ArrayList<ThemeDoc> themes = (ArrayList<ThemeDoc>) document.getThemes();
+			ArrayList<Theme> themes = (ArrayList<Theme>) document.getThemes();
 			document.setThemes(null);
 			
-			for (ThemeDoc theme : themes) {
+			for (Theme theme : themes) {
 				if (!theme.getId().equals("0")) {
 					theme = serviceFacade.getTheme(theme.getId());
 					document.addTheme(theme);
@@ -134,7 +134,7 @@ public class GestionDocument {
 			document.setAuteur(auteur);
 			for (int i = 0; i < idThemes.length; i++) {
 				if (!idThemes[i].equals("0")) {
-					ThemeDoc theme = new ThemeDoc();
+					Theme theme = new Theme();
 					theme.setId(idThemes[i]);
 					document.addTheme(theme);
 				}
@@ -205,7 +205,7 @@ public class GestionDocument {
 	/*
 	 * THEME
 	 */
-	private boolean isThemeValide(ThemeDoc theme) throws UserException {
+	private boolean isThemeValide(Theme theme) throws UserException {
 		boolean ok = true;
 		if (theme == null) ok = false;
 		else {
@@ -216,7 +216,7 @@ public class GestionDocument {
 		return ok;
 	}
 	
-	public ThemeDoc creerTheme(ThemeDoc theme) throws UserException {
+	public Theme creerTheme(Theme theme) throws UserException {
 		if (isThemeValide(theme)) {
 			init();
 			theme = serviceFacade.add(theme);
@@ -224,13 +224,13 @@ public class GestionDocument {
 		return theme;
 	}
 	
-	public ThemeDoc creerTheme(String ref, String nom, String desc) throws UserException {
-		ThemeDoc	theme = new ThemeDoc(ref, nom, desc);
+	public Theme creerTheme(String ref, String nom, String desc) throws UserException {
+		Theme	theme = new Theme(ref, nom, desc);
 		theme = creerTheme(theme);
 		return theme;
 	}
 	
-	public ThemeDoc modifierTheme(ThemeDoc theme) throws UserException {
+	public Theme modifierTheme(Theme theme) throws UserException {
 		if (isThemeValide(theme)) {
 			init();
 			theme = serviceFacade.update(theme);
@@ -238,8 +238,8 @@ public class GestionDocument {
 		return theme;
 	}
 	
-	public ThemeDoc modifierTheme(String ref, String nom, String desc) throws UserException {
-		ThemeDoc	theme = new ThemeDoc(ref, nom, desc);
+	public Theme modifierTheme(String ref, String nom, String desc) throws UserException {
+		Theme	theme = new Theme(ref, nom, desc);
 		theme = modifierTheme(theme);
 		return theme;
 	}
@@ -250,7 +250,7 @@ public class GestionDocument {
 		
 	}
 
-	public ThemeDoc rechercherTheme(String ref) throws UserException {
+	public Theme rechercherTheme(String ref) throws UserException {
 		init();
 		return serviceFacade.getTheme(ref);
 	}
